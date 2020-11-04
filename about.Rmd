@@ -1,0 +1,23 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This page has information about me
+
+I was born in Shandong, China. In 2015, I attended Shanghai Jiao Tong University and majored in Food Hygiene and Nutrition. 
+
+In 2017, I came to the US. I went to undergraduate school at Cornell, majoring in Nutritional Sciences and minoring in Applied Economics. 
+
+After graduating from Cornell in 2019, I came to Columbia for my graduate study in Biostatistics. Currently I work part-time in Seres Lab and help with data analysis. I am expected to graduate in May 2020.
+
+
+# Links to my personal networks
+
+* [Email address](xq2197@cumc.columbia.edu)
+* [GitHub account](https://github.com/qqqqqxxxxxx)
+* [LinkedIn](http://www.linkedin.com/in/clare-qian-516955149/)

@@ -1,0 +1,31 @@
+---
+title: "Clare Qian's Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is my personal website
+
+I am Clare and welcome to my personal website!
+
+
+# My puppy
+
+This is my puppy Treasure. He is a Pomeranian dog who is energetic all the time.
+
+<img src="image/puppy.jpg" style="width:75%">
+
+
+# Links to my personal networks
+
+* [Email address](xq2197@cumc.columbia.edu)
+* [GitHub account](https://github.com/qqqqqxxxxxx)
+* [LinkedIn](http://www.linkedin.com/in/clare-qian-516955149/)
+
+
+# Link to page within the site
+
+* [About me](about.html)
