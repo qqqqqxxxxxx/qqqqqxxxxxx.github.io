@@ -1,0 +1,69 @@
+---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(rvest)
+library(httr)
+library(p8105.datasets)
+library(plotly)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+data("rest_inspec")
+rest_inspec =
+  rest_inspec %>%
+  filter(grade %in% c("A", "B", "C"), boro != "Missing") %>% 
+  mutate(boro = str_to_title(boro))
+
+plot1 = 
+  rest_inspec %>% 
+  mutate(boro = fct_infreq(boro)) %>%  
+  ggplot(aes(x = boro, fill = grade)) + 
+  geom_bar()
+ggplotly(plot1)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec1 =
+  rest_inspec %>% 
+  group_by(boro, grade) %>% 
+  summarize(n = n()) %>% 
+  pivot_wider(names_from = grade, values_from = n) %>%
+  select(boro:C) %>%
+  filter(boro != "Missing") %>%
+  mutate(boro = str_to_title(boro))
+
+plot2 = 
+  rest_inspec1 %>%
+  select(boro, A) %>%
+  mutate(boro = fct_reorder(boro, A)) %>%
+  plot_ly(x = ~boro, y = ~A, color = ~boro, type = "scatter", mode = "markers", colors = "viridis")
+plot2
+```
+
+### Chart C
+
+```{r}
+plot3 = 
+  rest_inspec1 %>%
+  plot_ly(labels = ~boro, values = ~A, type = 'pie')
+plot3
+```
