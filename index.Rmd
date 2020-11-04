@@ -28,3 +28,4 @@ This is my puppy Treasure. He is a Pomeranian dog who is energetic all the time.
 # Link to page within the site
 
 * [About me](about.html)
+* [Dashboard](dashboard.html)
