@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # This is my personal website
@@ -21,7 +20,7 @@ This is my puppy Treasure. He is a Pomeranian dog who is energetic all the time.
 
 # Links to my personal networks
 
-* [Email address](xq2197@cumc.columbia.edu)
+* [Email address](mailto:<xq2197@cumc.columbia.edu>)
 * [GitHub account](https://github.com/qqqqqxxxxxx)
 * [LinkedIn](http://www.linkedin.com/in/clare-qian-516955149/)
 
